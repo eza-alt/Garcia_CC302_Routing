@@ -15,8 +15,9 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 1;
 
   final List<Widget> _pages = [
-    const HomePage(),
+   
     const SamplePage(),
+     const HomePage(),
     const ProfilePage(),
   ];
 
@@ -53,16 +54,17 @@ class _MainScreenState extends State<MainScreen> {
         },
         height: 65,
         destinations: const [
+           NavigationDestination(
+            icon: Icon(Icons.article),
+            selectedIcon: Icon(Icons.article_outlined),
+            label: 'Sample',
+          ),
           NavigationDestination(
             icon: Icon(Icons.home),
             selectedIcon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
-          NavigationDestination(
-            icon: Icon(Icons.article),
-            selectedIcon: Icon(Icons.article_outlined),
-            label: 'Sample',
-          ),
+         
           NavigationDestination(
             icon: Icon(Icons.person),
             selectedIcon: Icon(Icons.person_outlined),
